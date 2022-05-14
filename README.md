@@ -22,7 +22,7 @@ Telemetry System (Python + Multiprocess + GUI + WiFi): https://github.com/juanma
 
 The result of this project is a remotely-operated two-wheeled robotic 3D-printed car that allows both manual and automatic (PID-based) control. The system is featured by an ST Nucleo board for main control, a ESP8266-based Wemos D1 mini board, two wheels for and two DC PWM-controlled motors for motion, two ultrasonics sensors for object detection, an idle ball wheel for stability and a 3D printed customized chassis.
 
-This repository centralises the whole project
+This repository centralizes the whole project
 
 The component selection is not intended to be the best in terms of price, performance or even ease of design / implementation; the motivation of this project is to gather new knowledge and learn new technologies while enjoying the process.
 
@@ -56,10 +56,13 @@ Motion and Power System:
 
 ![Telemetry_System_GUI_v2](https://user-images.githubusercontent.com/41286765/168443296-73cb6451-dbac-40f2-a676-fb8e18c6a717.png)
 
-## Some pictures during the process <a name="pictures_process"></a>
+## Some sketches / pictures / screenshots on the project execution <a name="pictures_process"></a>
 
 ![image](https://user-images.githubusercontent.com/41286765/168442473-c7a252ac-f445-4122-b708-f35df00d4278.png)
-<br>First generic approach to hardware diagram (some points still pending to be determined or finally discarded)
+<br>Early generic approach to hardware diagram (some points still pending to be determined or finally discarded)
+
+![image](https://user-images.githubusercontent.com/41286765/168443974-04525864-c64b-406a-9357-bda2da606df3.png)
+<br>Main Control System: task interactions
 
 ![image](https://user-images.githubusercontent.com/41286765/168442579-94f6c3af-3dee-4aa4-ae64-7d5dffdec458.png)
 <br>Electronic schematic
@@ -67,14 +70,22 @@ Motion and Power System:
 ![image](https://user-images.githubusercontent.com/41286765/168441883-f6aa4b75-e672-4a5d-beaa-f12ec8a540cb.png)
 <br>Test of motor / PWM motion 
 
+![image](https://user-images.githubusercontent.com/41286765/168444031-5708b604-b8e8-4a5e-a016-cace6bc21e5c.png)
+<br>Experimental assessment of encoder resolution by manually turning the wheel for a complete loop (actually, N loops to then divide by N and minimizing the deviation). Such a relevant specification should be provided along with the device information by the manufacturer; it was not properly indicated and I did not receive even feedback from their side, having to manually determine the value by myself :)
+
 ![image](https://user-images.githubusercontent.com/41286765/168442017-0e8bbd79-a174-4c71-896f-b4214bb3d8a8.png)
 <br>Testing encoder signals on oscilloscope
+
+![image](https://user-images.githubusercontent.com/41286765/168443929-cc269651-9175-4042-8612-980bfbbeff50.png)
+<br>First manual sketch of 3D model
 
 ## Pending tasks / possible updates <a name="pending_tasks"></a>
 
 * Receive 3D chassis and build everyting + final test.
-* Main Control System: some modules pending to be documented
+* Main Control System: some modules pending to be documented.
 * Main Control System: PID closed-loop control (estimate system frequency model, calculate best PI/PID parameters, test, ...)
+* Main Control System: obstacle control.
+* SPI communication: As mentioned above, some components are chosen based only on learning purposes. However, Main Control and Wifi systems are independent and, therefore, SPI is not the best option for communication since master will lose messages from slave if the latter was not ready during the last attempt from master's side. This could be solved by going for a different protocol.
 * Replace Main Control System board (ST Nucleo) by a Xilinx Zynq-based, using baremetal / FreeRTOS / other OS and splitting the control between software (ARM in PS) and hardware (FPGA in PL).
 
 ## Contact <a name="Contact"></a>
