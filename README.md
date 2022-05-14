@@ -53,8 +53,8 @@ Motion and Power System:
 * Possible commands to send to the car are specific percentages of speed in both straight and side directions or lineal speed setpoint for automatic control PID-based control (processed within the Main Control System). 
 * A process is in charge of the WiFi server and another process handles the GUI, with queues as the mechanism to pass messages between they both.
 * GUI based on PySimpleGUI (https://pysimplegui.readthedocs.io/en/latest/)
-![Telemetry_System_GUI](https://user-images.githubusercontent.com/41286765/168441949-a883e276-1fc4-42ed-9194-7f1c5f434684.png)
 
+![Telemetry_System_GUI_v2](https://user-images.githubusercontent.com/41286765/168443296-73cb6451-dbac-40f2-a676-fb8e18c6a717.png)
 
 ## Some pictures during the process <a name="pictures_process"></a>
 
