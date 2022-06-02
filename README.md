@@ -20,6 +20,9 @@ Telemetry System (Python + Multiprocess + GUI + WiFi): https://github.com/juanma
 
 ## About The Project <a name="About-The-Project"></a>
 
+<img src="https://user-images.githubusercontent.com/41286765/171675893-8d6880c2-a5d8-426a-b160-c35f58cb56f6.jpg" alt="drawing" width="620">
+<img src="https://user-images.githubusercontent.com/41286765/171675915-6aea64ba-4789-42ef-afc5-6259ce48ecd4.jpg" alt="drawing" width="620">
+
 The result of this project is a remotely-operated two-wheeled robotic 3D-printed car that allows both manual and automatic (PID-based) control. The system is featured by an ST Nucleo board for main control, a ESP8266-based Wemos D1 mini board, two wheels for and two DC PWM-controlled motors for motion, two ultrasonics sensors for object detection, an idle ball wheel for stability and a 3D printed customized chassis.
 
 This repository centralizes the whole project
@@ -58,25 +61,26 @@ Motion and Power System:
 
 ## Some sketches / pictures / screenshots on the project execution <a name="pictures_process"></a>
 
-![image](https://user-images.githubusercontent.com/41286765/168442473-c7a252ac-f445-4122-b708-f35df00d4278.png)
+<img src="https://user-images.githubusercontent.com/41286765/168442473-c7a252ac-f445-4122-b708-f35df00d4278.png" alt="drawing" width="550">
 <br>Early generic approach to hardware diagram (some points still pending to be determined or finally discarded)
 
-![image](https://user-images.githubusercontent.com/41286765/168443974-04525864-c64b-406a-9357-bda2da606df3.png)
+
+<img src="https://user-images.githubusercontent.com/41286765/168443974-04525864-c64b-406a-9357-bda2da606df3.png" alt="drawing" width="400">
 <br>Main Control System: task interactions
 
-![image](https://user-images.githubusercontent.com/41286765/168442579-94f6c3af-3dee-4aa4-ae64-7d5dffdec458.png)
+<img src="https://user-images.githubusercontent.com/41286765/168442579-94f6c3af-3dee-4aa4-ae64-7d5dffdec458.png" alt="drawing" width="550">
 <br>Electronic schematic
 
-![image](https://user-images.githubusercontent.com/41286765/168441883-f6aa4b75-e672-4a5d-beaa-f12ec8a540cb.png)
+<img src="https://user-images.githubusercontent.com/41286765/168441883-f6aa4b75-e672-4a5d-beaa-f12ec8a540cb.png" alt="drawing" width="400">
 <br>Test of motor / PWM motion 
 
-![image](https://user-images.githubusercontent.com/41286765/168444031-5708b604-b8e8-4a5e-a016-cace6bc21e5c.png)
+<img src="https://user-images.githubusercontent.com/41286765/168444031-5708b604-b8e8-4a5e-a016-cace6bc21e5c.png" alt="drawing" width="400">
 <br>Experimental assessment of encoder resolution by manually turning the wheel for a complete loop (actually, N loops to then divide by N and minimizing the deviation). Such a relevant specification should be provided along with the device information by the manufacturer; it was not properly indicated and I did not receive even feedback from their side, having to manually determine the value by myself :)
 
-![image](https://user-images.githubusercontent.com/41286765/168442017-0e8bbd79-a174-4c71-896f-b4214bb3d8a8.png)
+<img src="https://user-images.githubusercontent.com/41286765/168442017-0e8bbd79-a174-4c71-896f-b4214bb3d8a8.png" alt="drawing" width="400">
 <br>Testing encoder signals on oscilloscope
 
-![image](https://user-images.githubusercontent.com/41286765/168443929-cc269651-9175-4042-8612-980bfbbeff50.png)
+<img src="https://user-images.githubusercontent.com/41286765/168443929-cc269651-9175-4042-8612-980bfbbeff50.png" alt="drawing" width="400">
 <br>First manual sketch of 3D model
 
 ## Pending tasks / possible updates <a name="pending_tasks"></a>
